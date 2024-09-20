@@ -2,7 +2,7 @@ import 'package:cart_bazar/core/common/widgets/custom_appbar.dart';
 import 'package:cart_bazar/features/authentication/presentation/widgets/sign_in_headline_text.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/common/widgets/rounded_button.dart';
+import '../../../../../core/common/widgets/button/rounded_button.dart';
 import '../../widgets/text_field.dart';
 
 class ForgortPassword extends StatefulWidget {

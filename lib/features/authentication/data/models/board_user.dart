@@ -11,8 +11,6 @@ class OnBoardUser {
     required this.lastName,
     required this.email,
     required this.password,
-    required this.age,
-    required this.gender,
   });
 
   OnBoardUser copyWith({
@@ -20,16 +18,12 @@ class OnBoardUser {
     String? lastName,
     String? email,
     String? password,
-    String? gender,
-    String? age,
   }) {
     return OnBoardUser(
       firstName: firstName ?? this.firstName,
       lastName: lastName ?? this.lastName,
       email: email ?? this.email,
       password: password ?? this.password,
-      age: age ?? this.age,
-      gender: gender ?? this.gender,
     );
   }
 

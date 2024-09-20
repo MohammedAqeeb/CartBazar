@@ -1,6 +1,6 @@
 import 'package:cart_bazar/core/common/navigator/app_navigator.dart';
 import 'package:cart_bazar/core/common/widgets/custom_appbar.dart';
-import 'package:cart_bazar/core/common/widgets/rounded_button.dart';
+import 'package:cart_bazar/core/common/widgets/button/rounded_button.dart';
 import 'package:cart_bazar/features/authentication/presentation/pages/sign_in/forgort_password.dart';
 import 'package:cart_bazar/features/authentication/presentation/widgets/rich_text_button.dart';
 import 'package:cart_bazar/features/authentication/presentation/widgets/text_field.dart';

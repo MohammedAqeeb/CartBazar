@@ -1,7 +1,9 @@
 import 'package:cart_bazar/core/common/navigator/app_navigator.dart';
 import 'package:cart_bazar/core/common/widgets/custom_appbar.dart';
-import 'package:cart_bazar/core/common/widgets/rounded_button.dart';
+import 'package:cart_bazar/core/common/widgets/button/rounded_button.dart';
+import 'package:cart_bazar/features/authentication/data/models/board_user.dart';
 import 'package:cart_bazar/features/authentication/presentation/pages/sign_in/forgort_password.dart';
+import 'package:cart_bazar/features/authentication/presentation/pages/sign_up/gender_age_screen.dart';
 import 'package:cart_bazar/features/authentication/presentation/widgets/rich_text_button.dart';
 import 'package:cart_bazar/features/authentication/presentation/widgets/sign_in_headline_text.dart';
 import 'package:cart_bazar/features/authentication/presentation/widgets/text_field.dart';
@@ -58,7 +60,23 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               const SizedBox(height: 40),
               RoundedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return SignUpGenderAgeScreen(
+                          onBoardUser: OnBoardUser(
+                            firstName: firtNameController.text.trim(),
+                            lastName: lastNameController.text.trim(),
+                            email: emailController.text.trim(),
+                            password: passwordController.text.trim(),
+                          ),
+                        );
+                      },
+                    ),
+                  );
+                },
                 title: 'Continue',
               ),
               const SizedBox(height: 20),

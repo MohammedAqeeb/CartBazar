@@ -3,4 +3,5 @@ import 'package:fpdart/fpdart.dart';
 
 abstract interface class AuthRepository {
   Future<Either> createUser(OnBoardUser user);
+  Future<Either> getAgeRange();
 }

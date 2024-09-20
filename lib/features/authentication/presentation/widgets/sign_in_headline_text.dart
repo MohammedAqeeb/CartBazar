@@ -3,14 +3,19 @@ import 'package:flutter/material.dart';
 
 class SignInHeadlineText extends StatelessWidget {
   final String text;
-  const SignInHeadlineText({super.key, required this.text});
+  final double fontSize;
+  const SignInHeadlineText({
+    super.key,
+    required this.text,
+    this.fontSize = 32,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: const TextStyle(
-        fontSize: 32,
+      style: TextStyle(
+        fontSize: fontSize,
         color: AppPalletes.offWhite,
         fontWeight: FontWeight.bold,
       ),
