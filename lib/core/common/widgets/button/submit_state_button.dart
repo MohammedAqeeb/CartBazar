@@ -1,4 +1,5 @@
-import 'package:cart_bazar/core/common/cubit/submit_button_cubit.dart';
+import 'package:cart_bazar/core/common/cubit/submit_button/submit_button_cubit.dart';
+import 'package:cart_bazar/core/theme/app_palletes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -60,7 +61,9 @@ class SubmitStateButton extends StatelessWidget {
           height ?? 50,
         ),
       ),
-      child: const CircularProgressIndicator(),
+      child: const CircularProgressIndicator(
+        backgroundColor: AppPalletes.hintTextColor,
+      ),
     );
   }
 }

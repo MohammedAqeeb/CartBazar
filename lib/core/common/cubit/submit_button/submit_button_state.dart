@@ -9,4 +9,8 @@ final class SubmitButtonLoading extends SubimitButtonState {}
 
 final class SubmitButtonSuccess extends SubimitButtonState {}
 
-final class SubmitButtonFailure extends SubimitButtonState {}
+final class SubmitButtonFailure extends SubimitButtonState {
+  final String errorMessage;
+
+  SubmitButtonFailure({required this.errorMessage});
+}

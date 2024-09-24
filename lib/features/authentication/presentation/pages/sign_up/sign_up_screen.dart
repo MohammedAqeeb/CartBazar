@@ -9,17 +9,15 @@ import 'package:cart_bazar/features/authentication/presentation/widgets/sign_in_
 import 'package:cart_bazar/features/authentication/presentation/widgets/text_field.dart';
 import 'package:flutter/material.dart';
 
-class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  SignUpScreen({super.key});
 
-  @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
-}
-
-class _SignUpScreenState extends State<SignUpScreen> {
   final emailController = TextEditingController();
+
   final firtNameController = TextEditingController();
+
   final lastNameController = TextEditingController();
+
   final passwordController = TextEditingController();
 
   @override
@@ -86,7 +84,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 onTap: () {
                   AppNavigator.push(
                     context,
-                    const ForgortPassword(),
+                    ForgortPassword(),
                   );
                 },
               ),

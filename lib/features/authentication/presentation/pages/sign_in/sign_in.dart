@@ -1,6 +1,7 @@
 import 'package:cart_bazar/core/common/navigator/app_navigator.dart';
 import 'package:cart_bazar/core/common/widgets/custom_appbar.dart';
 import 'package:cart_bazar/core/common/widgets/button/rounded_button.dart';
+import 'package:cart_bazar/features/authentication/data/models/user_sign_in.dart';
 import 'package:cart_bazar/features/authentication/presentation/pages/sign_in/enter_password.dart';
 import 'package:cart_bazar/features/authentication/presentation/pages/sign_up/sign_up_screen.dart';
 import 'package:cart_bazar/features/authentication/presentation/widgets/rich_text_button.dart';
@@ -9,15 +10,11 @@ import 'package:flutter/material.dart';
 
 import '../../widgets/sign_in_headline_text.dart';
 
-class SignInScreen extends StatefulWidget {
-  const SignInScreen({super.key});
+class SignInScreen extends StatelessWidget {
+  SignInScreen({super.key});
 
-  @override
-  State<SignInScreen> createState() => _SignInScreenState();
-}
-
-class _SignInScreenState extends State<SignInScreen> {
   final emailController = TextEditingController();
+
   final formKey = GlobalKey<FormState>();
 
   @override
@@ -44,25 +41,32 @@ class _SignInScreenState extends State<SignInScreen> {
               const SizedBox(height: 16),
               RoundedButton(
                 onPressed: () {
+                  final email = emailController.text.trim();
                   AppNavigator.push(
                     context,
-                    const EnterPasswordScreen(),
+                    EnterPasswordScreen(
+                      userSignIn: UserSignIn(email, ''),
+                    ),
                   );
                 },
                 title: 'Continue',
               ),
               const SizedBox(height: 16),
-              RichTextButton(
-                richTextTitle: 'Don\'t have an Account ? ',
-                spanTextTitle: 'Create One',
-                onTap: () {
-                  AppNavigator.push(context, const SignUpScreen());
-                },
-              ),
+              createNewAccount(context),
             ],
           ),
         ),
       ),
+    );
+  }
+
+  Widget createNewAccount(BuildContext context) {
+    return RichTextButton(
+      richTextTitle: 'Don\'t have an Account ? ',
+      spanTextTitle: 'Create One',
+      onTap: () {
+        AppNavigator.push(context, SignUpScreen());
+      },
     );
   }
 }

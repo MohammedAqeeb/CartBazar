@@ -1,5 +1,5 @@
 import 'package:cart_bazar/core/common/app_bottom_sheet/select_age.dart';
-import 'package:cart_bazar/core/common/cubit/submit_button_cubit.dart';
+import 'package:cart_bazar/core/common/cubit/submit_button/submit_button_cubit.dart';
 import 'package:cart_bazar/core/common/widgets/button/submit_state_button.dart';
 import 'package:cart_bazar/core/common/widgets/custom_appbar.dart';
 import 'package:cart_bazar/core/theme/app_palletes.dart';
@@ -29,33 +29,44 @@ class SignUpGenderAgeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(height: 20),
-                const SignInHeadlineText(
-                  text: 'Tell us About Yourself',
-                  fontSize: 18,
-                ),
-                const SizedBox(height: 20),
-                buildSelectionGender(context),
-                const SizedBox(height: 30),
-                const SignInHeadlineText(
-                  text: 'How old are you',
-                  fontSize: 18,
-                ),
-                const SizedBox(height: 30),
-                buildAgeSelector(context),
-              ],
+      body: BlocListener<SubmitButtonCubit, SubimitButtonState>(
+        listener: (context, state) {
+          if (state is SubmitButtonFailure) {
+            var snackBar = SnackBar(
+              content: Text(state.errorMessage),
+              behavior: SnackBarBehavior.floating,
+            );
+            ScaffoldMessenger.of(context).showSnackBar(snackBar);
+          }
+        },
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(height: 20),
+                  const SignInHeadlineText(
+                    text: 'Tell us About Yourself',
+                    fontSize: 18,
+                  ),
+                  const SizedBox(height: 20),
+                  buildSelectionGender(context),
+                  const SizedBox(height: 30),
+                  const SignInHeadlineText(
+                    text: 'How old are you',
+                    fontSize: 18,
+                  ),
+                  const SizedBox(height: 30),
+                  buildAgeSelector(context),
+                ],
+              ),
             ),
-          ),
-          const Spacer(),
-          buildButton(context),
-        ],
+            const Spacer(),
+            buildButton(context),
+          ],
+        ),
       ),
     );
   }
@@ -165,7 +176,7 @@ class SignUpGenderAgeScreen extends StatelessWidget {
                   ? 'MALE'
                   : 'FEMALE';
 
-          context.read<SubmitButtonCubit>().buttonCubit(
+          context.read<SubmitButtonCubit>().onButtonSubmit(
                 usecase: serviceLocator<SignupUseCase>(),
                 param: onBoardUser,
               );
