@@ -7,7 +7,7 @@ import 'package:cart_bazar/features/authentication/domain/usecase/signin_usecase
 import 'package:cart_bazar/features/authentication/presentation/pages/sign_in/forgort_password.dart';
 import 'package:cart_bazar/features/authentication/presentation/widgets/rich_text_button.dart';
 import 'package:cart_bazar/features/authentication/presentation/widgets/text_field.dart';
-import 'package:cart_bazar/features/home/presentation/pages/home_screen.dart';
+import 'package:cart_bazar/features/home/home_presentation/home_screen.dart';
 import 'package:cart_bazar/init_dependency.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
