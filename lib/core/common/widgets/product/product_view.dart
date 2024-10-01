@@ -1,5 +1,5 @@
 import 'package:cart_bazar/core/theme/app_palletes.dart';
-import 'package:cart_bazar/features/home/product/domain/entity/product_entity.dart';
+import 'package:cart_bazar/features/home/domain/entity/product_entity.dart';
 import 'package:flutter/material.dart';
 
 class ProductView extends StatelessWidget {

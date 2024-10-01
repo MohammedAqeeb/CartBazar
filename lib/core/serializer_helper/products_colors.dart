@@ -1,4 +1,4 @@
-import 'package:cart_bazar/features/home/product/data/models/products_colors.dart';
+import 'package:cart_bazar/features/home/data/models/products_colors.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class SHProductColors {

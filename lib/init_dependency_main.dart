@@ -99,14 +99,19 @@ void _topSellingProducts() {
         productDataSource: serviceLocator(),
       ),
     )
-    ..registerSingleton(
+    ..registerSingleton<GetTopSellingProductsUseCase>(
       GetTopSellingProductsUseCase(
         productsRepository: serviceLocator(),
       ),
     )
+    ..registerSingleton<NewProductsUseCase>(
+      NewProductsUseCase(
+        productsRepository: serviceLocator(),
+      ),
+    )
     ..registerSingleton(
-      TopSellingCubit(
-        productsUseCase: serviceLocator(),
+      ProductByCategoryUsecase(
+        productsRepository: serviceLocator(),
       ),
     );
 }

@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:cart_bazar/core/common/cubit/submit_button/submit_button_cubit.dart';
 import 'package:cart_bazar/core/theme/app_theme.dart';
 import 'package:cart_bazar/features/authentication/presentation/bloc/cubit/selected_age_cubit.dart';
-import 'package:cart_bazar/features/home/home_presentation/cubit/get_user_info_cubit.dart';
+import 'package:cart_bazar/features/home/presentation/bloc/cubit/get_user_info_cubit.dart';
 import 'package:cart_bazar/features/splash/presentation/cubit/splash_cubit.dart';
 import 'package:cart_bazar/features/splash/presentation/pages/screen.dart';
 import 'package:cart_bazar/firebase_options.dart';

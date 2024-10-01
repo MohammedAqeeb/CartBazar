@@ -8,16 +8,17 @@ import 'package:cart_bazar/features/authentication/domain/usecase/reset_password
 import 'package:cart_bazar/features/authentication/domain/usecase/signin_usecase.dart';
 import 'package:cart_bazar/features/authentication/domain/usecase/signup_usecase.dart';
 import 'package:cart_bazar/features/authentication/presentation/bloc/cubit/get_age_cubit.dart';
-import 'package:cart_bazar/features/home/category/data/data_source/categories_data_source.dart';
-import 'package:cart_bazar/features/home/category/data/repository/category_repo_imp.dart';
-import 'package:cart_bazar/features/home/category/domain/repository/category_repository.dart';
-import 'package:cart_bazar/features/home/category/domain/usecase/category_use_case.dart';
-import 'package:cart_bazar/features/home/home_presentation/cubit/get_user_info_cubit.dart';
-import 'package:cart_bazar/features/home/product/data/data_source/product_data_source.dart';
-import 'package:cart_bazar/features/home/product/data/repository/get_products_repo_impl.dart';
-import 'package:cart_bazar/features/home/product/domain/repository/get_products_repo.dart';
-import 'package:cart_bazar/features/home/product/domain/usecase/top_selling_usecase.dart';
-import 'package:cart_bazar/features/home/product/presentation/cubit/top_selling_cubit.dart';
+import 'package:cart_bazar/features/home/data/data_source/categories_data_source.dart';
+import 'package:cart_bazar/features/home/data/repository/category_repo_imp.dart';
+import 'package:cart_bazar/features/home/domain/repository/category_repository.dart';
+import 'package:cart_bazar/features/home/domain/usecase/category_use_case.dart';
+import 'package:cart_bazar/features/home/presentation/bloc/cubit/get_user_info_cubit.dart';
+import 'package:cart_bazar/features/home/data/data_source/product_data_source.dart';
+import 'package:cart_bazar/features/home/data/repository/get_products_repo_impl.dart';
+import 'package:cart_bazar/features/home/domain/repository/get_products_repo.dart';
+import 'package:cart_bazar/features/home/domain/usecase/new_products_usecase.dart';
+import 'package:cart_bazar/features/home/domain/usecase/product_by_category_usecase.dart';
+import 'package:cart_bazar/features/home/domain/usecase/top_selling_usecase.dart';
 import 'package:get_it/get_it.dart';
 
 import 'features/authentication/data/repository/auth_repository_impl.dart';
