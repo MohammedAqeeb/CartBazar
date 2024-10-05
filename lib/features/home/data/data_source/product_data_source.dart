@@ -9,6 +9,8 @@ abstract interface class ProductDataSource {
   Future<Either<Failure, List<Products>>> getNewArrivalProducts();
   Future<Either<Failure, List<Products>>> getProductsByCategory(
       String categoryId);
+
+  Future<Either<Failure, List<Products>>> searchProduct(String product);
 }
 
 class ProductDataSourceImp implements ProductDataSource {
@@ -80,6 +82,29 @@ class ProductDataSourceImp implements ProductDataSource {
         return Left(Failure('Product for this Category Not Available'));
       }
       return Right(newProducts);
+    } catch (e) {
+      return Left(Failure('Something went wrong..Try again later'));
+    }
+  }
+
+  @override
+  Future<Either<Failure, List<Products>>> searchProduct(String product) async {
+    final List<Products> searchProduct = [];
+
+    try {
+      final searchQuery = await db
+          .collection('products')
+          .where('title', isGreaterThanOrEqualTo: product)
+          .get();
+
+      if (searchQuery.docs.isNotEmpty) {
+        for (var result in searchQuery.docs) {
+          searchProduct.add(Products.fromJson(result.data()));
+        }
+      } else {
+        return Left(Failure('Product Not Found'));
+      }
+      return Right(searchProduct);
     } catch (e) {
       return Left(Failure('Something went wrong..Try again later'));
     }

@@ -3,7 +3,7 @@ import 'package:cart_bazar/core/common/navigator/app_navigator.dart';
 import 'package:cart_bazar/core/theme/app_palletes.dart';
 import 'package:cart_bazar/features/home/domain/entity/categories_entity.dart';
 import 'package:cart_bazar/features/home/presentation/widgets/view_more.dart';
-import 'package:cart_bazar/features/home/presentation/pages/view_all_categories.dart';
+import 'package:cart_bazar/features/home/presentation/pages/category/view_all_categories.dart';
 import 'package:cart_bazar/init_dependency.dart';
 import 'package:flutter/material.dart';
 

@@ -5,9 +5,9 @@ import 'package:cart_bazar/init_dependency.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/common/widgets/product/product_view.dart';
-import '../../domain/usecase/product_by_category_usecase.dart';
-import '../bloc/product_cubit/product_display_cubit.dart';
+import '../../../../../core/common/widgets/product/product_view.dart';
+import '../../../domain/usecase/product_by_category_usecase.dart';
+import '../../bloc/product_cubit/product_display_cubit.dart';
 
 class ProductsByCategoryScreen extends StatelessWidget {
   final CategoriesEntity categoriesEntity;

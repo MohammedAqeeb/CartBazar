@@ -7,7 +7,7 @@ import 'package:cart_bazar/init_dependency.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../domain/entity/product_entity.dart';
+import '../../../domain/entity/product_entity.dart';
 
 class TopSellingProductScreen extends StatelessWidget {
   const TopSellingProductScreen({super.key});

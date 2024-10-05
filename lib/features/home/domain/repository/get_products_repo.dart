@@ -5,5 +5,8 @@ import 'package:fpdart/fpdart.dart';
 abstract interface class GetProductsRepository {
   Future<Either<Failure, List<ProductEntity>>> fetchTopSellingProduct();
   Future<Either<Failure, List<ProductEntity>>> fetchNewArrivals();
-  Future<Either<Failure, List<ProductEntity>>> fetchProductsByCategory(String categoryId);
+  Future<Either<Failure, List<ProductEntity>>> fetchProductsByCategory(
+      String categoryId);
+  Future<Either<Failure, List<ProductEntity>>> searchProductsByTitle(
+      String productName);
 }

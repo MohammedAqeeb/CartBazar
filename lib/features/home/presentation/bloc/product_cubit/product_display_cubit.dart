@@ -7,8 +7,7 @@ part 'product_display_state.dart';
 
 class ProductsDisplayCubit extends Cubit<ProductsDisplayState> {
   final UseCase useCase;
-  ProductsDisplayCubit({required this.useCase})
-      : super(ProductsDisplayLoadig());
+  ProductsDisplayCubit({required this.useCase}) : super(ProductsInitialState());
 
   Future<void> getProducts({dynamic params}) async {
     emit(ProductsDisplayLoadig());
@@ -18,5 +17,10 @@ class ProductsDisplayCubit extends Cubit<ProductsDisplayState> {
       (error) => emit(ProductDisplayFailure(errorMessage: error.errorMessage)),
       (products) => emit(ProductsDisplaySuccess(displayProducts: products)),
     );
+  }
+
+  // for product search state
+  void displayInitialState() {
+    emit(ProductsInitialState());
   }
 }

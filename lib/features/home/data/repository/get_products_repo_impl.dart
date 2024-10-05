@@ -24,4 +24,10 @@ class GetProductsRepoImpl implements GetProductsRepository {
       String categoryId) async {
     return await productDataSource.getProductsByCategory(categoryId);
   }
+
+  @override
+  Future<Either<Failure, List<ProductEntity>>> searchProductsByTitle(
+      String productName) async {
+    return await productDataSource.searchProduct(productName);
+  }
 }

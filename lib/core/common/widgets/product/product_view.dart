@@ -1,5 +1,7 @@
+import 'package:cart_bazar/core/common/navigator/app_navigator.dart';
 import 'package:cart_bazar/core/theme/app_palletes.dart';
 import 'package:cart_bazar/features/home/domain/entity/product_entity.dart';
+import 'package:cart_bazar/features/home/presentation/pages/product/product_detail_screen.dart';
 import 'package:flutter/material.dart';
 
 class ProductView extends StatelessWidget {
@@ -9,7 +11,10 @@ class ProductView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        AppNavigator.push(
+            context, ProductDetailScreen(productEntity: productEntity));
+      },
       child: Container(
         width: 180,
         decoration: BoxDecoration(

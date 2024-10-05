@@ -113,5 +113,10 @@ void _topSellingProducts() {
       ProductByCategoryUsecase(
         productsRepository: serviceLocator(),
       ),
+    )
+    ..registerSingleton(
+      SearchProductUseCase(
+        repository: serviceLocator(),
+      ),
     );
 }

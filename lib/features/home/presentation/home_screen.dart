@@ -1,10 +1,10 @@
 import 'package:cart_bazar/features/home/presentation/widgets/header.dart';
-import 'package:cart_bazar/features/home/presentation/widgets/search_field.dart';
-import 'package:cart_bazar/features/home/presentation/pages/new_arrival_product_screen.dart';
-import 'package:cart_bazar/features/home/presentation/pages/top_selling_product_screen.dart';
+import 'package:cart_bazar/features/home/presentation/widgets/on_tap_search.dart';
+import 'package:cart_bazar/features/home/presentation/pages/product/new_arrival_product_screen.dart';
+import 'package:cart_bazar/features/home/presentation/pages/product/top_selling_product_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'pages/categories.dart';
+import 'pages/category/categories.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             HeaderWidget(),
             SizedBox(height: 24),
-            SearchField(),
+            OnTapSearchScreen(),
             SizedBox(height: 24),
             CategoriesScreen(),
             SizedBox(height: 24),
@@ -30,11 +30,9 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-
-// ElevatedButton(
-//                 onPressed: () {
-//                   ProductDataSourceImp imp = ProductDataSourceImp();
-//                   imp.getNewArrivalProducts();
-//                 },
-//                 child: const Text('ADD PRODUCTS')),
+            // ElevatedButton(
+            //     onPressed: () {
+            //       ProductDataSourceImp imp = ProductDataSourceImp();
+            //       imp.searchProduct('jacket');
+            //     },
+            //     child: const Text('ADD PRODUCTS')),

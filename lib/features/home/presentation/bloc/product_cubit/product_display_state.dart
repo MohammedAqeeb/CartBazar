@@ -3,6 +3,8 @@ part of 'product_display_cubit.dart';
 @immutable
 sealed class ProductsDisplayState {}
 
+final class ProductsInitialState extends ProductsDisplayState {}
+
 final class ProductsDisplayLoadig extends ProductsDisplayState {}
 
 final class ProductsDisplaySuccess extends ProductsDisplayState {

@@ -12,6 +12,7 @@ import 'package:cart_bazar/features/home/data/data_source/categories_data_source
 import 'package:cart_bazar/features/home/data/repository/category_repo_imp.dart';
 import 'package:cart_bazar/features/home/domain/repository/category_repository.dart';
 import 'package:cart_bazar/features/home/domain/usecase/category_use_case.dart';
+import 'package:cart_bazar/features/home/domain/usecase/search_product_usecase.dart';
 import 'package:cart_bazar/features/home/presentation/bloc/cubit/get_user_info_cubit.dart';
 import 'package:cart_bazar/features/home/data/data_source/product_data_source.dart';
 import 'package:cart_bazar/features/home/data/repository/get_products_repo_impl.dart';

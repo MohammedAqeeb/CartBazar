@@ -4,9 +4,9 @@ import 'package:cart_bazar/init_dependency.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/common/widgets/product/product_view.dart';
-import '../widgets/view_more.dart';
-import '../../domain/entity/product_entity.dart';
+import '../../../../../core/common/widgets/product/product_view.dart';
+import '../../widgets/view_more.dart';
+import '../../../domain/entity/product_entity.dart';
 
 class NewArrivalProductScreen extends StatelessWidget {
   const NewArrivalProductScreen({super.key});

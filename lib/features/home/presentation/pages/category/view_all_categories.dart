@@ -6,8 +6,8 @@ import 'package:cart_bazar/init_dependency.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../domain/entity/categories_entity.dart';
-import 'products_by_category.dart';
+import '../../../domain/entity/categories_entity.dart';
+import '../product/products_by_category.dart';
 
 class ViewAllCategoriesScreen extends StatelessWidget {
   const ViewAllCategoriesScreen({super.key});
