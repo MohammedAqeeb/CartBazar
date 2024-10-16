@@ -4,7 +4,9 @@ import 'package:cart_bazar/features/home/presentation/pages/product/new_arrival_
 import 'package:cart_bazar/features/home/presentation/pages/product/top_selling_product_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'pages/category/categories.dart';
+import 'category/categories.dart';
+
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

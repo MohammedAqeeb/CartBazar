@@ -6,6 +6,7 @@ Future<void> initalizedDependency() async {
   _signUpDependency();
   _categoryDependecy();
   _topSellingProducts();
+  _addToCart();
 }
 
 void _signUpDependency() {
@@ -117,6 +118,23 @@ void _topSellingProducts() {
     ..registerSingleton(
       SearchProductUseCase(
         repository: serviceLocator(),
+      ),
+    );
+}
+
+void _addToCart() {
+  serviceLocator
+    ..registerSingleton<OrderDataSource>(
+      AddToCartDataSourceImpl(),
+    )
+    ..registerSingleton<OrderRepository>(
+      OrderRepoImplementation(
+        orderDataSource: serviceLocator(),
+      ),
+    )
+    ..registerSingleton(
+      AddToCartUsecase(
+        orderRepository: serviceLocator(),
       ),
     );
 }

@@ -9,5 +9,7 @@ part of 'products_colors.dart';
 ProductsColors _$ProductsColorsFromJson(Map<String, dynamic> json) =>
     ProductsColors(
       title: json['title'] as String,
-      rgb: json['rgb'] as String,
+      rgb: (json['rgb'] as List<dynamic>)
+          .map((e) => (e as num).toInt())
+          .toList(),
     );

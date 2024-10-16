@@ -1,6 +1,6 @@
 class ProductColorEntity {
   final String title;
-  final String rgb;
+  final List<int> rgb;
 
   ProductColorEntity({
     required this.title,

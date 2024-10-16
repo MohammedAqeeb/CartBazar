@@ -2,7 +2,7 @@ import 'package:cart_bazar/core/theme/app_palletes.dart';
 import 'package:flutter/material.dart';
 
 class AppBottomSheet {
-  static Future<void> selectAge({
+  static Future<void> getSheet({
     required BuildContext context,
     required Widget widgets,
   }) {

@@ -123,7 +123,7 @@ class SignUpGenderAgeScreen extends StatelessWidget {
     return BlocBuilder<SelectedAgeCubit, String>(
       builder: (context, state) {
         return GestureDetector(
-          onTap: () => AppBottomSheet.selectAge(
+          onTap: () => AppBottomSheet.getSheet(
             context: context,
             widgets: MultiBlocProvider(
               providers: [

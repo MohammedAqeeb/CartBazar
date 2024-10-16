@@ -20,8 +20,11 @@ import 'package:cart_bazar/features/home/domain/repository/get_products_repo.dar
 import 'package:cart_bazar/features/home/domain/usecase/new_products_usecase.dart';
 import 'package:cart_bazar/features/home/domain/usecase/product_by_category_usecase.dart';
 import 'package:cart_bazar/features/home/domain/usecase/top_selling_usecase.dart';
+import 'package:cart_bazar/features/order/data/data_source/order_data_source.dart';
+import 'package:cart_bazar/features/order/data/repository/order_repo_impl.dart';
+import 'package:cart_bazar/features/order/domain/repository/order_repo.dart';
+import 'package:cart_bazar/features/order/domain/usecase/add_to_cart_usecase.dart';
 import 'package:get_it/get_it.dart';
-
 import 'features/authentication/data/repository/auth_repository_impl.dart';
 
 part 'init_dependency_main.dart';
