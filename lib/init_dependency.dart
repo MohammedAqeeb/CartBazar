@@ -8,6 +8,11 @@ import 'package:cart_bazar/features/authentication/domain/usecase/reset_password
 import 'package:cart_bazar/features/authentication/domain/usecase/signin_usecase.dart';
 import 'package:cart_bazar/features/authentication/domain/usecase/signup_usecase.dart';
 import 'package:cart_bazar/features/authentication/presentation/bloc/cubit/get_age_cubit.dart';
+import 'package:cart_bazar/features/cart/data/data_source/product_carts.dart';
+import 'package:cart_bazar/features/cart/data/repository/product_cart_repo_impl.dart';
+import 'package:cart_bazar/features/cart/domain/usecase/get_cart_product.dart';
+import 'package:cart_bazar/features/cart/domain/usecase/remove_cart_product.dart';
+import 'package:cart_bazar/features/cart/presentation/cubit/product_cart_cubit.dart';
 import 'package:cart_bazar/features/home/data/data_source/categories_data_source.dart';
 import 'package:cart_bazar/features/home/data/repository/category_repo_imp.dart';
 import 'package:cart_bazar/features/home/domain/repository/category_repository.dart';
@@ -24,7 +29,9 @@ import 'package:cart_bazar/features/order/data/data_source/order_data_source.dar
 import 'package:cart_bazar/features/order/data/repository/order_repo_impl.dart';
 import 'package:cart_bazar/features/order/domain/repository/order_repo.dart';
 import 'package:cart_bazar/features/order/domain/usecase/add_to_cart_usecase.dart';
+import 'package:cart_bazar/features/order/domain/usecase/order_place_usecase.dart';
 import 'package:get_it/get_it.dart';
 import 'features/authentication/data/repository/auth_repository_impl.dart';
+import 'features/cart/domain/repository/product_cart_repo.dart';
 
 part 'init_dependency_main.dart';

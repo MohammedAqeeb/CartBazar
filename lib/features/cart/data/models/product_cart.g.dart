@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'carts.dart';
+part of 'product_cart.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Carts _$CartsFromJson(Map<String, dynamic> json) => Carts(
+ProductCart _$ProductCartFromJson(Map<String, dynamic> json) => ProductCart(
       productId: json['productId'] as String,
       productTitle: json['productTitle'] as String,
       productQuantity: (json['productQuantity'] as num).toInt(),
@@ -19,7 +19,8 @@ Carts _$CartsFromJson(Map<String, dynamic> json) => Carts(
       cartId: json['cartId'] as String,
     );
 
-Map<String, dynamic> _$CartsToJson(Carts instance) => <String, dynamic>{
+Map<String, dynamic> _$ProductCartToJson(ProductCart instance) =>
+    <String, dynamic>{
       'cartId': instance.cartId,
       'productId': instance.productId,
       'productTitle': instance.productTitle,

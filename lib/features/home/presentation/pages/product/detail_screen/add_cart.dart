@@ -1,6 +1,6 @@
 import 'package:cart_bazar/core/common/cubit/submit_button/submit_button_cubit.dart';
 import 'package:cart_bazar/core/common/navigator/app_navigator.dart';
-import 'package:cart_bazar/core/common/product/product_price.dart';
+import 'package:cart_bazar/core/common/helper/product/product_price.dart';
 import 'package:cart_bazar/core/common/widgets/button/submit_state_button.dart';
 import 'package:cart_bazar/features/cart/presentation/pages/cart_page.dart';
 import 'package:cart_bazar/features/home/domain/entity/product_entity.dart';
@@ -40,6 +40,7 @@ class AddCartButton extends StatelessWidget {
                     orderRepository: serviceLocator(),
                   ),
                   param: Carts(
+                    cartId: '',
                     productId: productEntity.productId,
                     productTitle: productEntity.title,
                     productQuantity: context.read<ProductQuantityCubit>().state,

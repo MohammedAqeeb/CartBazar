@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:cart_bazar/core/common/cubit/submit_button/submit_button_cubit.dart';
 import 'package:cart_bazar/core/theme/app_theme.dart';
 import 'package:cart_bazar/features/authentication/presentation/bloc/cubit/selected_age_cubit.dart';
+import 'package:cart_bazar/features/cart/presentation/cubit/product_cart_cubit.dart';
 import 'package:cart_bazar/features/home/presentation/bloc/cubit/get_user_info_cubit.dart';
 import 'package:cart_bazar/features/splash/presentation/cubit/splash_cubit.dart';
 import 'package:cart_bazar/features/splash/presentation/pages/screen.dart';
@@ -48,6 +49,9 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => serviceLocator<GetUserInfoCubit>(),
         ),
+        BlocProvider(
+          create: (context) => serviceLocator<ProductCartCubit>(),
+        ),
       ],
       child: MaterialApp(
         title: 'Cart Bazar',
@@ -57,7 +61,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
-
- 

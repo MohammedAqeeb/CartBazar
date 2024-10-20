@@ -9,6 +9,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shimmer/shimmer.dart';
 
+import '../../../../core/common/navigator/app_navigator.dart';
+import '../../../cart/presentation/pages/cart_page.dart';
+
 class HeaderWidget extends StatelessWidget {
   const HeaderWidget({super.key});
 
@@ -110,7 +113,7 @@ Widget _gender(UserInfoEnity userInfoEnity) {
 Widget _card(BuildContext context) {
   return GestureDetector(
     onTap: () {
-      // AppNavigator.push(context,const CartPage());
+      AppNavigator.push(context, const CartPage());
     },
     child: Container(
       height: 40,

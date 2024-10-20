@@ -1,5 +1,5 @@
-class CartEntity {
-  String cartId;
+class ProductCartEntity {
+  final String cartId;
   final String productId;
   final String productTitle;
   final int productQuantity;
@@ -10,7 +10,7 @@ class CartEntity {
   final String productImage;
   final String createdDate;
 
-  CartEntity({
+  ProductCartEntity({
     required this.cartId,
     required this.productId,
     required this.productTitle,

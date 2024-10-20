@@ -7,6 +7,8 @@ Future<void> initalizedDependency() async {
   _categoryDependecy();
   _topSellingProducts();
   _addToCart();
+  _getCartItems();
+  _orderPlaced();
 }
 
 void _signUpDependency() {
@@ -52,7 +54,6 @@ void _signUpDependency() {
         getUserInfoUsecase: serviceLocator(),
       ),
     )
-
     // Get Age Use Case Dependency
     ..registerSingleton<AgeRangeUseCase>(
       AgeRangeUseCase(
@@ -137,4 +138,40 @@ void _addToCart() {
         orderRepository: serviceLocator(),
       ),
     );
+}
+
+void _getCartItems() {
+  serviceLocator
+    ..registerSingleton<ProductCartsDataSource>(
+      ProductCartsDataSourceImpl(),
+    )
+    ..registerSingleton<ProductCartRepo>(
+      ProductCartRepoImpl(
+        productCartsDataSource: serviceLocator(),
+      ),
+    )
+    ..registerSingleton<GetCartProductUseCase>(
+      GetCartProductUseCase(
+        productCartRepo: serviceLocator(),
+      ),
+    )
+    ..registerSingleton<RemoveCartProductUseCase>(
+      RemoveCartProductUseCase(
+        productCartRepo: serviceLocator(),
+      ),
+    )
+    ..registerSingleton<ProductCartCubit>(
+      ProductCartCubit(
+        useCase: serviceLocator(),
+        removeUsecase: serviceLocator(),
+      ),
+    );
+}
+
+void _orderPlaced() {
+  serviceLocator.registerSingleton(
+    OrderPlaceUsecase(
+      orderRepository: serviceLocator(),
+    ),
+  );
 }

@@ -1,11 +1,11 @@
-import 'package:cart_bazar/features/order/domain/entity/cart_entity.dart';
+import 'package:cart_bazar/features/cart/domain/entity/product_cart_entity.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-part 'carts.g.dart';
+part 'product_cart.g.dart';
 
 @JsonSerializable(createToJson: true)
-class Carts extends CartEntity {
-  Carts({
+class ProductCart extends ProductCartEntity {
+  ProductCart({
     required super.productId,
     required super.productTitle,
     required super.productQuantity,
@@ -18,8 +18,8 @@ class Carts extends CartEntity {
     required super.cartId,
   });
 
-  factory Carts.fromJson(Map<String, dynamic> json) => _$CartsFromJson(json);
+  factory ProductCart.fromJson(Map<String, dynamic> json) =>
+      _$ProductCartFromJson(json);
 
-  Map<String, dynamic> toJson() => _$CartsToJson(this);
-  
+   Map<String, dynamic> toJson() => _$ProductCartToJson(this);
 }
