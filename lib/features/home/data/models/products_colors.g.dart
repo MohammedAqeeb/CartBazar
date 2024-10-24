@@ -13,3 +13,9 @@ ProductsColors _$ProductsColorsFromJson(Map<String, dynamic> json) =>
           .map((e) => (e as num).toInt())
           .toList(),
     );
+
+Map<String, dynamic> _$ProductsColorsToJson(ProductsColors instance) =>
+    <String, dynamic>{
+      'title': instance.title,
+      'rgb': instance.rgb,
+    };

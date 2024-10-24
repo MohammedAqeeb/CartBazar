@@ -9,6 +9,7 @@ Future<void> initalizedDependency() async {
   _addToCart();
   _getCartItems();
   _orderPlaced();
+  _favoriteProducts();
 }
 
 void _signUpDependency() {
@@ -174,4 +175,34 @@ void _orderPlaced() {
       orderRepository: serviceLocator(),
     ),
   );
+}
+
+void _favoriteProducts() {
+  serviceLocator
+    ..registerFactory<IsFavoriteUsecase>(
+      () => IsFavoriteUsecase(
+        productsRepository: serviceLocator(),
+      ),
+    )
+    ..registerFactory<AddFavoriteProductUseCase>(
+      () => AddFavoriteProductUseCase(
+        productsRepository: serviceLocator(),
+      ),
+    )
+    ..registerSingleton(
+      GetFavoritesProductUsecase(
+        productsRepository: serviceLocator(),
+      ),
+    )
+    ..registerLazySingleton(
+      () => FavoriteProductCubit(
+        useCase: serviceLocator(),
+        favUseCase: serviceLocator(),
+      ),
+    )
+    ..registerLazySingleton(
+      () => GetFavoriteProductsCubit(
+        useCase: serviceLocator(),
+      ),
+    );
 }

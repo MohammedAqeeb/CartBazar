@@ -6,8 +6,6 @@ import 'package:flutter/material.dart';
 
 import 'category/categories.dart';
 
-
-
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 

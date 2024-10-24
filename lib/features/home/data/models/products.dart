@@ -5,7 +5,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'products.g.dart';
 
-@JsonSerializable(createToJson: false)
+@JsonSerializable(createToJson: true)
 class Products extends ProductEntity {
   Products({
     required super.categoryId,
@@ -23,4 +23,6 @@ class Products extends ProductEntity {
 
   factory Products.fromJson(Map<String, dynamic> json) =>
       _$ProductsFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ProductsToJson(this);
 }

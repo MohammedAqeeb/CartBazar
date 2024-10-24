@@ -63,19 +63,20 @@ class ProductsByCategoryScreen extends StatelessWidget {
 
   Widget _buildNewInProduct(List<ProductEntity> products) {
     return Expanded(
-        child: GridView.builder(
-      itemCount: products.length,
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        mainAxisSpacing: 20,
-        crossAxisSpacing: 24,
-        childAspectRatio: 0.6,
+      child: GridView.builder(
+        itemCount: products.length,
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          mainAxisSpacing: 20,
+          crossAxisSpacing: 24,
+          childAspectRatio: 0.6,
+        ),
+        itemBuilder: (context, index) {
+          return ProductView(
+            productEntity: products[index],
+          );
+        },
       ),
-      itemBuilder: (context, index) {
-        return ProductView(
-          productEntity: products[index],
-        );
-      },
-    ));
+    );
   }
 }

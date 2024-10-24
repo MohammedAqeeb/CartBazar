@@ -1,3 +1,5 @@
+
+
 class ProductColorEntity {
   final String title;
   final List<int> rgb;

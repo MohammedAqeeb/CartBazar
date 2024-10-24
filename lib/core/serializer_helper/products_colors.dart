@@ -12,6 +12,17 @@ class SHProductColors {
     return colors;
   }
 
+  static List<Map<String, dynamic>> toJson(List<dynamic>? items) {
+    List<ProductsColors> colors = [];
+    if (items == null) {
+      return [];
+    }
+    return colors.map((color) => color.toJson()).toList();
+  }
+
   static DateTime? timestampToDateTime(Timestamp? timestamp) =>
       timestamp?.toDate();
+
+  static FieldValue currentServerTimestamp(DateTime? dateTime) =>
+      FieldValue.serverTimestamp();
 }

@@ -6,5 +6,6 @@ class AppImages {
   static const profile = '$basePath/profile.png';
   
   static const appLogo = '$basePath/cart_bazar.png';
+  static const arrowLogo = '$basePath/vector.png';
 
 }

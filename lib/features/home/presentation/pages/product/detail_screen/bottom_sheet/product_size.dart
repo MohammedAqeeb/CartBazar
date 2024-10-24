@@ -3,7 +3,7 @@ import 'package:cart_bazar/features/home/domain/entity/product_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../bloc/size/selected_size.dart';
+import '../../../../bloc/size_cubit/selected_size.dart';
 
 class ProductSizeBottomSheet extends StatelessWidget {
   final ProductEntity productEntity;

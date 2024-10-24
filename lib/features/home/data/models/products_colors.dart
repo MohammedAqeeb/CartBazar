@@ -3,7 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'products_colors.g.dart';
 
-@JsonSerializable(createToJson: false)
+@JsonSerializable(createToJson: true)
 class ProductsColors extends ProductColorEntity {
   ProductsColors({
     required super.title,
@@ -12,4 +12,6 @@ class ProductsColors extends ProductColorEntity {
 
   factory ProductsColors.fromJson(Map<String, dynamic> json) =>
       _$ProductsColorsFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ProductsColorsToJson(this);
 }

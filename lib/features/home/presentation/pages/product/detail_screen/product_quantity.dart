@@ -2,7 +2,7 @@ import 'package:cart_bazar/core/theme/app_palletes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../bloc/quantity/product_quantity_cubit.dart';
+import '../../../bloc/quantity_cubit/product_quantity_cubit.dart';
 
 class ProductQuantity extends StatelessWidget {
   const ProductQuantity({super.key});

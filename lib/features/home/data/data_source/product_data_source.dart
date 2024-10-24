@@ -2,6 +2,7 @@ import 'package:cart_bazar/core/error/failure.dart';
 import 'package:cart_bazar/features/home/data/models/products.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fpdart/fpdart.dart';
 
 abstract interface class ProductDataSource {
@@ -11,10 +12,14 @@ abstract interface class ProductDataSource {
       String categoryId);
 
   Future<Either<Failure, List<Products>>> searchProduct(String product);
+  Future<Either> addOrRemoveFavorite(Products products);
+  Future<bool> isFavorite(String productId);
+  Future<Either<Failure, List<Products>>> getFavoritesProducts();
 }
 
 class ProductDataSourceImp implements ProductDataSource {
   final db = FirebaseFirestore.instance;
+  var user = FirebaseAuth.instance.currentUser;
 
   @override
   Future<Either<Failure, List<Products>>> getTopSellingProducts() async {
@@ -107,6 +112,81 @@ class ProductDataSourceImp implements ProductDataSource {
       return Right(searchProduct);
     } catch (e) {
       return Left(Failure('Something went wrong..Try again later'));
+    }
+  }
+
+  @override
+  Future<Either> addOrRemoveFavorite(Products products) async {
+    try {
+      var query = await db
+          .collection('Users')
+          .doc(user!.uid)
+          .collection('Favorites')
+          .where(
+            'productId',
+            isEqualTo: products.productId,
+          )
+          .get();
+      if (query.docs.isNotEmpty) {
+        await query.docs.first.reference.delete();
+        return const Right(false);
+      } else {
+        db
+            .collection('Users')
+            .doc(user!.uid)
+            .collection('Favorites')
+            .add(products.toJson());
+        return const Right(true);
+      }
+    } catch (e) {
+      return const Left('Something went wrong');
+    }
+  }
+
+  @override
+  Future<bool> isFavorite(String productId) async {
+    try {
+      var user = FirebaseAuth.instance.currentUser;
+      var products = await FirebaseFirestore.instance
+          .collection("Users")
+          .doc(user!.uid)
+          .collection('Favorites')
+          .where('productId', isEqualTo: productId)
+          .get();
+
+      if (products.docs.isNotEmpty) {
+        return true;
+      } else {
+        return false;
+      }
+    } catch (e) {
+      return false;
+    }
+  }
+
+  @override
+  Future<Either<Failure, List<Products>>> getFavoritesProducts() async {
+    List<Products> products = [];
+    try {
+      var query = await db
+          .collection('Users')
+          .doc(user!.uid)
+          .collection('Favorites')
+          .get();
+
+      if (query.docs.isNotEmpty) {
+        products.clear();
+        for (var prod in query.docs) {
+          products.add(Products.fromJson(prod.data()));
+        }
+      } else {
+        return Left(Failure('Add Products to Favorites'));
+      }
+      return Right(products);
+    } catch (e) {
+      return Left(
+        Failure('Unable to fetch Products'),
+      );
     }
   }
 }

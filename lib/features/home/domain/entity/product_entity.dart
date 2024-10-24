@@ -6,10 +6,17 @@ import 'product_color_entity.dart';
 
 class ProductEntity {
   final String categoryId;
-  @JsonKey(fromJson: SHProductColors.getProductColors)
+
+  @JsonKey(
+      fromJson: SHProductColors.getProductColors,
+      toJson: SHProductColors.toJson)
   final List<ProductColorEntity> colors;
-  @JsonKey(fromJson: SHProductColors.timestampToDateTime)
+
+  @JsonKey(
+      fromJson: SHProductColors.timestampToDateTime,
+      toJson: SHProductColors.currentServerTimestamp)
   final DateTime? createdDate;
+  
   final num discountedPrice;
   final String gender;
   final List<String> images;

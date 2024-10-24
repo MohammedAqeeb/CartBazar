@@ -1,6 +1,6 @@
 import 'package:cart_bazar/core/theme/app_palletes.dart';
 import 'package:cart_bazar/features/home/domain/entity/product_entity.dart';
-import 'package:cart_bazar/features/home/presentation/bloc/colors/selected_color_cubit.dart';
+import 'package:cart_bazar/features/home/presentation/bloc/cubit_colors/selected_color_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

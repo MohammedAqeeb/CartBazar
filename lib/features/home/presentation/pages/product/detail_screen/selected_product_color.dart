@@ -1,7 +1,7 @@
 import 'package:cart_bazar/core/common/app_bottom_sheet/select_age.dart';
 import 'package:cart_bazar/core/theme/app_palletes.dart';
 import 'package:cart_bazar/features/home/domain/entity/product_entity.dart';
-import 'package:cart_bazar/features/home/presentation/bloc/colors/selected_color_cubit.dart';
+import 'package:cart_bazar/features/home/presentation/bloc/cubit_colors/selected_color_cubit.dart';
 import 'package:cart_bazar/features/home/presentation/pages/product/detail_screen/bottom_sheet/product_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -62,9 +62,7 @@ class SelectedProductColor extends StatelessWidget {
                       );
                     },
                   ),
-                  const SizedBox(
-                    width: 15,
-                  ),
+                  const SizedBox(width: 10),
                   const Icon(
                     Icons.keyboard_arrow_down,
                     size: 30,

@@ -1,7 +1,7 @@
 import 'package:cart_bazar/core/common/app_bottom_sheet/select_age.dart';
 import 'package:cart_bazar/core/theme/app_palletes.dart';
 import 'package:cart_bazar/features/home/domain/entity/product_entity.dart';
-import 'package:cart_bazar/features/home/presentation/bloc/size/selected_size.dart';
+import 'package:cart_bazar/features/home/presentation/bloc/size_cubit/selected_size.dart';
 import 'package:cart_bazar/features/home/presentation/pages/product/detail_screen/bottom_sheet/product_size.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

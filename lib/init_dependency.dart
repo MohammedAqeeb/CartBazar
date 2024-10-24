@@ -17,7 +17,9 @@ import 'package:cart_bazar/features/home/data/data_source/categories_data_source
 import 'package:cart_bazar/features/home/data/repository/category_repo_imp.dart';
 import 'package:cart_bazar/features/home/domain/repository/category_repository.dart';
 import 'package:cart_bazar/features/home/domain/usecase/category_use_case.dart';
+import 'package:cart_bazar/features/home/domain/usecase/get_favorites_product.dart';
 import 'package:cart_bazar/features/home/domain/usecase/search_product_usecase.dart';
+import 'package:cart_bazar/features/home/presentation/bloc/cubit/favorite_product_cubit.dart';
 import 'package:cart_bazar/features/home/presentation/bloc/cubit/get_user_info_cubit.dart';
 import 'package:cart_bazar/features/home/data/data_source/product_data_source.dart';
 import 'package:cart_bazar/features/home/data/repository/get_products_repo_impl.dart';
@@ -29,9 +31,12 @@ import 'package:cart_bazar/features/order/data/data_source/order_data_source.dar
 import 'package:cart_bazar/features/order/data/repository/order_repo_impl.dart';
 import 'package:cart_bazar/features/order/domain/repository/order_repo.dart';
 import 'package:cart_bazar/features/order/domain/usecase/add_to_cart_usecase.dart';
+import 'package:cart_bazar/features/home/domain/usecase/is_favourite.dart';
 import 'package:cart_bazar/features/order/domain/usecase/order_place_usecase.dart';
+import 'package:cart_bazar/features/settings/presentation/cubit/favorite_products_cubit.dart';
 import 'package:get_it/get_it.dart';
 import 'features/authentication/data/repository/auth_repository_impl.dart';
 import 'features/cart/domain/repository/product_cart_repo.dart';
+import 'features/home/domain/usecase/add_favorite_product.dart';
 
 part 'init_dependency_main.dart';

@@ -21,3 +21,18 @@ Products _$ProductsFromJson(Map<String, dynamic> json) => Products(
       salesNumber: (json['salesNumber'] as num).toInt(),
       sizes: (json['sizes'] as List<dynamic>).map((e) => e as String).toList(),
     );
+
+Map<String, dynamic> _$ProductsToJson(Products instance) => <String, dynamic>{
+      'categoryId': instance.categoryId,
+      'colors': SHProductColors.toJson(instance.colors),
+      'createdDate':
+          SHProductColors.currentServerTimestamp(instance.createdDate),
+      'discountedPrice': instance.discountedPrice,
+      'gender': instance.gender,
+      'images': instance.images,
+      'prices': instance.prices,
+      'sizes': instance.sizes,
+      'productId': instance.productId,
+      'title': instance.title,
+      'salesNumber': instance.salesNumber,
+    };
