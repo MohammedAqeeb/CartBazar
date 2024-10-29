@@ -6,13 +6,13 @@ part of 'order_placed.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-
 Map<String, dynamic> _$OrderPlacedToJson(OrderPlaced instance) =>
     <String, dynamic>{
       'orderId': instance.orderId,
-      'products': instance.products.map((e) => e.toJson()).toList(),
+      'products': SHProducts.toProductCartJson(instance.products),
       'createdDate': instance.createdDate,
       'shippingAddress': instance.shippingAddress,
       'itemCount': instance.itemCount,
       'totalPrice': instance.totalPrice,
+      'orderStatus': SHProducts.toStatus(instance.orderStatus),
     };

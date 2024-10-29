@@ -10,6 +10,7 @@ Future<void> initalizedDependency() async {
   _getCartItems();
   _orderPlaced();
   _favoriteProducts();
+  _orderStatus();
 }
 
 void _signUpDependency() {
@@ -161,8 +162,8 @@ void _getCartItems() {
         productCartRepo: serviceLocator(),
       ),
     )
-    ..registerSingleton<ProductCartCubit>(
-      ProductCartCubit(
+    ..registerLazySingleton<ProductCartCubit>(
+      () => ProductCartCubit(
         useCase: serviceLocator(),
         removeUsecase: serviceLocator(),
       ),
@@ -203,6 +204,28 @@ void _favoriteProducts() {
     ..registerLazySingleton(
       () => GetFavoriteProductsCubit(
         useCase: serviceLocator(),
+      ),
+    );
+}
+
+void _orderStatus() {
+  serviceLocator
+    ..registerSingleton<CompletedOrdersDataSource>(
+      CompletedOrdersSourceImp(),
+    )
+    ..registerSingleton<CompletedOrdersRepository>(
+      CompletedOrdersRepoImp(
+        completedOrdersDataSource: serviceLocator(),
+      ),
+    )
+    ..registerSingleton(
+      CompletedOrdersUsecase(
+        completedOrdersRepository: serviceLocator(),
+      ),
+    )
+    ..registerLazySingleton(
+      () => CompletedOrdersCubit(
+        orders: serviceLocator(),
       ),
     );
 }

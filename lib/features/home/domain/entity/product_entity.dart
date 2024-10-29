@@ -1,4 +1,4 @@
-import 'package:cart_bazar/core/serializer_helper/products_colors.dart';
+import 'package:cart_bazar/core/serializer_helper/products.dart';
 
 import 'package:json_annotation/json_annotation.dart';
 
@@ -7,16 +7,14 @@ import 'product_color_entity.dart';
 class ProductEntity {
   final String categoryId;
 
-  @JsonKey(
-      fromJson: SHProductColors.getProductColors,
-      toJson: SHProductColors.toJson)
+  @JsonKey(fromJson: SHProducts.getProductColors, toJson: SHProducts.toStatus)
   final List<ProductColorEntity> colors;
 
   @JsonKey(
-      fromJson: SHProductColors.timestampToDateTime,
-      toJson: SHProductColors.currentServerTimestamp)
+      fromJson: SHProducts.timestampToDateTime,
+      toJson: SHProducts.currentServerTimestamp)
   final DateTime? createdDate;
-  
+
   final num discountedPrice;
   final String gender;
   final List<String> images;

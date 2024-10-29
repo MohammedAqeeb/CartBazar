@@ -1,17 +1,21 @@
+import 'package:cart_bazar/core/common/helper/order/serializer.dart';
 import 'package:cart_bazar/features/cart/domain/entity/product_cart_entity.dart';
+import 'package:json_annotation/json_annotation.dart';
 
-import 'order_status.dart';
+import 'completed_order_status.dart';
 
-class OrderEntity {
+class CompletedOrderEntity {
+  @JsonKey(fromJson: OrderSerializer.getCartProducts)
   final List<ProductCartEntity> products;
   final String createdDate;
   final String shippingAddress;
   final int itemCount;
   final double totalPrice;
   final String code;
-  final List<OrderStatusEntity> orderStatus;
+  @JsonKey(fromJson: OrderSerializer.getOrderStatus)
+  final List<CompletedOrderStatusEntity> orderStatus;
 
-  OrderEntity({
+  CompletedOrderEntity({
     required this.products,
     required this.createdDate,
     required this.shippingAddress,

@@ -18,8 +18,6 @@ class ProductCartCubit extends Cubit<ProductCartState> {
         super(ProductCartLoading());
 
   void getCartProduct() async {
-    emit(ProductCartLoading());
-
     final getCart = await _productUseCase.call();
 
     getCart.fold(
@@ -28,7 +26,7 @@ class ProductCartCubit extends Cubit<ProductCartState> {
     );
   }
 
-  void removeCartProduct(String id) async {
+  Future<void> removeCartProduct(String id) async {
     emit(ProductCartLoading());
     final removedProd = await _removeCartProductUseCase.call(params: id);
 

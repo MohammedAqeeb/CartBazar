@@ -4,6 +4,7 @@ import 'package:cart_bazar/core/common/widgets/button/submit_state_button.dart';
 import 'package:cart_bazar/core/common/widgets/custom_appbar.dart';
 import 'package:cart_bazar/features/cart/domain/entity/product_cart_entity.dart';
 import 'package:cart_bazar/features/order/data/models/order_placed.dart';
+import 'package:cart_bazar/features/order/data/models/order_status.dart';
 import 'package:cart_bazar/features/order/domain/usecase/order_place_usecase.dart';
 import 'package:cart_bazar/init_dependency.dart';
 import 'package:flutter/material.dart';
@@ -83,6 +84,28 @@ class CheckoutOrderScreen extends StatelessWidget {
                             totalPrice:
                                 CartCheckoutPriceHelper.calculateSubtotal(
                                     productCartEntity),
+                            orderStatus: [
+                              OrderStatus(
+                                title: 'Order Placed',
+                                done: true,
+                                createdDate: DateTime.now(),
+                              ),
+                              OrderStatus(
+                                title: 'Order Confirmed',
+                                done: false,
+                                createdDate: DateTime.now(),
+                              ),
+                              OrderStatus(
+                                title: 'Order Shipped',
+                                done: false,
+                                createdDate: DateTime.now(),
+                              ),
+                              OrderStatus(
+                                title: 'Delivered',
+                                done: false,
+                                createdDate: DateTime.now(),
+                              ),
+                            ],
                           ),
                         );
                   } else {
@@ -90,7 +113,7 @@ class CheckoutOrderScreen extends StatelessWidget {
                       content: Text('Enter valid address'),
                       behavior: SnackBarBehavior.floating,
                     );
-      
+
                     ScaffoldMessenger.of(context).showSnackBar(snackBar);
                   }
                 },

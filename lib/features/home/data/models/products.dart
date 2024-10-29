@@ -1,4 +1,4 @@
-import 'package:cart_bazar/core/serializer_helper/products_colors.dart';
+import 'package:cart_bazar/core/serializer_helper/products.dart';
 import 'package:cart_bazar/features/home/domain/entity/product_entity.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:json_annotation/json_annotation.dart';

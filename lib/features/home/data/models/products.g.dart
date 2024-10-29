@@ -8,9 +8,9 @@ part of 'products.dart';
 
 Products _$ProductsFromJson(Map<String, dynamic> json) => Products(
       categoryId: json['categoryId'] as String,
-      colors: SHProductColors.getProductColors(json['colors'] as List?),
-      createdDate: SHProductColors.timestampToDateTime(
-          json['createdDate'] as Timestamp?),
+      colors: SHProducts.getProductColors(json['colors'] as List?),
+      createdDate:
+          SHProducts.timestampToDateTime(json['createdDate'] as Timestamp?),
       discountedPrice: json['discountedPrice'] as num,
       gender: json['gender'] as String,
       images:
@@ -24,9 +24,8 @@ Products _$ProductsFromJson(Map<String, dynamic> json) => Products(
 
 Map<String, dynamic> _$ProductsToJson(Products instance) => <String, dynamic>{
       'categoryId': instance.categoryId,
-      'colors': SHProductColors.toJson(instance.colors),
-      'createdDate':
-          SHProductColors.currentServerTimestamp(instance.createdDate),
+      'colors': SHProducts.toStatus(instance.colors),
+      'createdDate': SHProducts.currentServerTimestamp(instance.createdDate),
       'discountedPrice': instance.discountedPrice,
       'gender': instance.gender,
       'images': instance.images,

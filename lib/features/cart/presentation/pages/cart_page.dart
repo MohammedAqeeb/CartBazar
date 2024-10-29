@@ -15,13 +15,14 @@ class CartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => serviceLocator<ProductCartCubit>()..getCartProduct(),
-      child: Scaffold(
-        appBar: const CustomAppBar(
-          title: Text('Cart'),
-        ),
-        body: BlocBuilder<ProductCartCubit, ProductCartState>(
+    return Scaffold(
+      appBar: const CustomAppBar(
+        title: Text('Cart'),
+      ),
+      body: BlocProvider(
+        create: (context) =>
+            serviceLocator<ProductCartCubit>()..getCartProduct(),
+        child: BlocBuilder<ProductCartCubit, ProductCartState>(
           builder: (context, state) {
             if (state is ProductCartLoading) {
               return const Center(

@@ -11,7 +11,7 @@ import 'package:shimmer/shimmer.dart';
 
 import '../../../../core/common/navigator/app_navigator.dart';
 import '../../../cart/presentation/pages/cart_page.dart';
-import '../../../settings/presentation/settings.dart';
+import '../../../settings/presentation/pages/settings.dart';
 
 class HeaderWidget extends StatelessWidget {
   const HeaderWidget({super.key});

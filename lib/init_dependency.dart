@@ -33,10 +33,15 @@ import 'package:cart_bazar/features/order/domain/repository/order_repo.dart';
 import 'package:cart_bazar/features/order/domain/usecase/add_to_cart_usecase.dart';
 import 'package:cart_bazar/features/home/domain/usecase/is_favourite.dart';
 import 'package:cart_bazar/features/order/domain/usecase/order_place_usecase.dart';
+import 'package:cart_bazar/features/settings/data/data_source/completed_orders_source.dart';
+import 'package:cart_bazar/features/settings/data/repository/completed_repo_imp.dart';
+import 'package:cart_bazar/features/settings/domain/usecase/completed_orders_usecase.dart';
+import 'package:cart_bazar/features/settings/presentation/cubit/cubit/completed_orders_cubit.dart';
 import 'package:cart_bazar/features/settings/presentation/cubit/favorite_products_cubit.dart';
 import 'package:get_it/get_it.dart';
 import 'features/authentication/data/repository/auth_repository_impl.dart';
 import 'features/cart/domain/repository/product_cart_repo.dart';
 import 'features/home/domain/usecase/add_favorite_product.dart';
+import 'features/settings/domain/repository/completed_orders_repo.dart';
 
 part 'init_dependency_main.dart';

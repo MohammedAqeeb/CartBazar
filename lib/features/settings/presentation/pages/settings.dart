@@ -4,7 +4,8 @@ import 'package:cart_bazar/features/settings/presentation/widgets/favorites_scre
 
 import 'package:flutter/material.dart';
 
-import 'widgets/settings_button.dart';
+import '../widgets/orders_status.dart';
+import '../widgets/settings_button.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -25,8 +26,10 @@ class SettingsScreen extends StatelessWidget {
               },
             ),
             SettingsButton(
-              buttonName: 'My Address',
-              onTap: () {},
+              buttonName: 'My Orders',
+              onTap: () {
+                AppNavigator.push(context, const OrdersStatusScreen());
+              },
             ),
             SettingsButton(
               buttonName: 'Payment',
