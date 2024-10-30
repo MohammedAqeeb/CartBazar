@@ -12,7 +12,7 @@ class CompletedOrders extends CompletedOrderEntity {
     required super.shippingAddress,
     required super.itemCount,
     required super.totalPrice,
-    required super.code,
+    required super.orderId,
     required super.orderStatus,
   });
 

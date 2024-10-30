@@ -6,7 +6,7 @@ part 'order_status.g.dart';
 class OrderStatus {
   final String title;
   final bool done;
-  final DateTime? createdDate;
+  final String createdDate;
 
   OrderStatus({
     required this.title,

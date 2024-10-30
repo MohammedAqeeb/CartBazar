@@ -4,6 +4,7 @@ import 'package:cart_bazar/core/error/failure.dart';
 import 'package:cart_bazar/features/settings/data/models/completed_orders.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:fpdart/fpdart.dart';
 
 abstract interface class CompletedOrdersDataSource {
@@ -25,7 +26,7 @@ class CompletedOrdersSourceImp implements CompletedOrdersDataSource {
 
       if (query.docs.isNotEmpty) {
         for (var status in query.docs) {
-          log(status.data().toString());
+          debugPrint(status.data().toString());
           completedOrders.add(CompletedOrders.fromJson(status.data()));
         }
       } else {
@@ -33,8 +34,8 @@ class CompletedOrdersSourceImp implements CompletedOrdersDataSource {
       }
       return Right(completedOrders);
     } catch (e) {
-      log(e.toString());
-   
+      debugPrint(e.toString());
+
       return Left(Failure('Unable to Fetch Orders'));
     }
   }

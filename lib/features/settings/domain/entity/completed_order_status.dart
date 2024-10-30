@@ -6,7 +6,7 @@ part 'completed_order_status.g.dart';
 class CompletedOrderStatusEntity {
   final String title;
   final bool done;
-  final DateTime? createdDate;
+  final String createdDate;
 
   CompletedOrderStatusEntity({
     required this.title,

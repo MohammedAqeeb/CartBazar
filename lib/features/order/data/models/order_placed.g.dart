@@ -9,10 +9,10 @@ part of 'order_placed.dart';
 Map<String, dynamic> _$OrderPlacedToJson(OrderPlaced instance) =>
     <String, dynamic>{
       'orderId': instance.orderId,
-      'products': SHProducts.toProductCartJson(instance.products),
+      'products': instance.products.map((e) => e.toJson()).toList(),
       'createdDate': instance.createdDate,
       'shippingAddress': instance.shippingAddress,
       'itemCount': instance.itemCount,
       'totalPrice': instance.totalPrice,
-      'orderStatus': SHProducts.toStatus(instance.orderStatus),
+      'orderStatus': instance.orderStatus.map((e) => e.toJson()).toList(),
     };

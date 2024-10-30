@@ -20,9 +20,10 @@ class ProductCartCubit extends Cubit<ProductCartState> {
   void getCartProduct() async {
     final getCart = await _productUseCase.call();
 
+    if (isClosed) return;
     getCart.fold(
       (error) => emit(ProductCartFailure(errorMessage: error.errorMessage)),
-      (cartProduct) => emit(ProductCarttSuccess(product: cartProduct)),
+      (products) => emit(ProductCarttSuccess(product: products)),
     );
   }
 

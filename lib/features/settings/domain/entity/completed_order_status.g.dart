@@ -11,7 +11,5 @@ CompletedOrderStatusEntity _$CompletedOrderStatusEntityFromJson(
     CompletedOrderStatusEntity(
       title: json['title'] as String,
       done: json['done'] as bool,
-      createdDate: json['createdDate'] == null
-          ? null
-          : DateTime.parse(json['createdDate'] as String),
+      createdDate: json['createdDate'] as String,
     );

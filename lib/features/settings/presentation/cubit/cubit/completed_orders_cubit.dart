@@ -14,7 +14,6 @@ class CompletedOrdersCubit extends Cubit<CompletedOrdersState> {
         super(CompletedOrdersLoading());
 
   Future<void> getOrders() async {
-    emit(CompletedOrdersLoading());
     final order = await _completedOrdersUsecase.call();
 
     order.fold(

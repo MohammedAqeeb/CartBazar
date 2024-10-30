@@ -11,7 +11,7 @@ class CompletedOrderEntity {
   final String shippingAddress;
   final int itemCount;
   final double totalPrice;
-  final String code;
+  final String orderId;
   @JsonKey(fromJson: OrderSerializer.getOrderStatus)
   final List<CompletedOrderStatusEntity> orderStatus;
 
@@ -21,7 +21,7 @@ class CompletedOrderEntity {
     required this.shippingAddress,
     required this.itemCount,
     required this.totalPrice,
-    required this.code,
+    required this.orderId,
     required this.orderStatus,
   });
 }

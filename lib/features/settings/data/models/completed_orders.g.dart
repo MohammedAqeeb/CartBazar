@@ -13,6 +13,6 @@ CompletedOrders _$CompletedOrdersFromJson(Map<String, dynamic> json) =>
       shippingAddress: json['shippingAddress'] as String,
       itemCount: (json['itemCount'] as num).toInt(),
       totalPrice: (json['totalPrice'] as num).toDouble(),
-      code: json['code'] as String,
+      orderId: json['orderId'] as String,
       orderStatus: OrderSerializer.getOrderStatus(json['orderStatus'] as List?),
     );

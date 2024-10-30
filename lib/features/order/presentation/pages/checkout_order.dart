@@ -88,22 +88,22 @@ class CheckoutOrderScreen extends StatelessWidget {
                               OrderStatus(
                                 title: 'Order Placed',
                                 done: true,
-                                createdDate: DateTime.now(),
+                                createdDate: DateTime.now().toString(),
                               ),
                               OrderStatus(
                                 title: 'Order Confirmed',
                                 done: false,
-                                createdDate: DateTime.now(),
+                                createdDate: DateTime.now().toString(),
                               ),
                               OrderStatus(
                                 title: 'Order Shipped',
                                 done: false,
-                                createdDate: DateTime.now(),
+                                createdDate: DateTime.now().toString(),
                               ),
                               OrderStatus(
                                 title: 'Delivered',
                                 done: false,
-                                createdDate: DateTime.now(),
+                                createdDate: DateTime.now().toString(),
                               ),
                             ],
                           ),
