@@ -26,7 +26,7 @@ class SettingsButton extends StatelessWidget {
           width: double.infinity,
           height: 55,
           decoration: BoxDecoration(
-            color: AppPalletes.secondBackground,
+            color: AppPalettes.secondBackground,
             borderRadius: BorderRadius.circular(12),
           ),
           child: Row(

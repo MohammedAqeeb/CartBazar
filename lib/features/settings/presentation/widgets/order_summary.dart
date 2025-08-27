@@ -48,7 +48,7 @@ class OrderDetailPage extends StatelessWidget {
                   width: 30,
                   decoration: BoxDecoration(
                     color: orderEntity.orderStatus[index].done
-                        ? AppPalletes.primary
+                        ? AppPalettes.primary
                         : Colors.white,
                     shape: BoxShape.circle,
                   ),
@@ -109,7 +109,7 @@ class OrderDetailPage extends StatelessWidget {
             height: 70,
             padding: const EdgeInsets.symmetric(horizontal: 16),
             decoration: BoxDecoration(
-              color: AppPalletes.secondBackground,
+              color: AppPalettes.secondBackground,
               borderRadius: BorderRadius.circular(10),
             ),
             child: Row(
@@ -133,7 +133,7 @@ class OrderDetailPage extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.w400,
                     fontSize: 14,
-                    color: AppPalletes.primary,
+                    color: AppPalettes.primary,
                   ),
                 )
               ],
@@ -159,7 +159,7 @@ class OrderDetailPage extends StatelessWidget {
           width: double.infinity,
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: AppPalletes.secondBackground,
+            color: AppPalettes.secondBackground,
             borderRadius: BorderRadius.circular(10),
           ),
           child: Text(orderEntity.shippingAddress),

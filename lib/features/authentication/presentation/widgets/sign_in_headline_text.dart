@@ -16,7 +16,7 @@ class SignInHeadlineText extends StatelessWidget {
       text,
       style: TextStyle(
         fontSize: fontSize,
-        color: AppPalletes.offWhite,
+        color: AppPalettes.offWhite,
         fontWeight: FontWeight.bold,
       ),
     );

@@ -32,8 +32,6 @@ class AddToCartDataSourceImpl implements OrderDataSource {
 
   @override
   Future<Either> productOrderPlaced(OrderPlaced orders) async {
-    print('called');
-    print(orders.toJson());
     try {
       final query =
           db.collection('Users').doc(user!.uid).collection('Order').doc();
@@ -44,7 +42,6 @@ class AddToCartDataSourceImpl implements OrderDataSource {
 
       // after order place deleting products in cart
       for (var carts in orders.products) {
-        print('deleted carts');
         await db
             .collection('Users')
             .doc(user!.uid)
@@ -55,7 +52,6 @@ class AddToCartDataSourceImpl implements OrderDataSource {
 
       return const Right('Order Placed Successfully');
     } catch (e) {
-      print(e);
       return const Left('Unable to place order..Try Again Later');
     }
   }

@@ -62,7 +62,7 @@ class SubmitStateButton extends StatelessWidget {
         ),
       ),
       child: const CircularProgressIndicator(
-        backgroundColor: AppPalletes.hintTextColor,
+        backgroundColor: AppPalettes.hintTextColor,
       ),
     );
   }

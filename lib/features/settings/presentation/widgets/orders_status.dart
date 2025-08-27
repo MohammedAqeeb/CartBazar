@@ -80,7 +80,7 @@ class OrdersStatusScreen extends StatelessWidget {
         width: double.infinity,
         height: 70,
         decoration: BoxDecoration(
-          color: AppPalletes.secondBackground,
+          color: AppPalettes.secondBackground,
           borderRadius: BorderRadius.circular(12),
         ),
         child: Row(
@@ -105,7 +105,7 @@ class OrdersStatusScreen extends StatelessWidget {
                   style: const TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.w500,
-                    color: AppPalletes.hintTextColor,
+                    color: AppPalettes.hintTextColor,
                   ),
                 ),
               ],

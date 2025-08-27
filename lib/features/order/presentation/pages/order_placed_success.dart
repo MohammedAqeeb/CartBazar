@@ -13,9 +13,9 @@ class OrderPlacedSuccessScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppPalletes.primary,
+      backgroundColor: AppPalettes.primary,
       appBar: const CustomAppBar(
-        backgroundColor: AppPalletes.primary,
+        backgroundColor: AppPalettes.primary,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.end,
@@ -32,7 +32,7 @@ class OrderPlacedSuccessScreen extends StatelessWidget {
               height: 350,
               padding: const EdgeInsets.symmetric(horizontal: 16),
               decoration: const BoxDecoration(
-                color: AppPalletes.secondBackground,
+                color: AppPalettes.secondBackground,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),

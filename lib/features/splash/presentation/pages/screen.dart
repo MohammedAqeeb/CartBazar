@@ -27,7 +27,7 @@ class SplashScreen extends StatelessWidget {
         }
       },
       child: Scaffold(
-        backgroundColor: AppPalletes.offWhite,
+        backgroundColor: AppPalettes.offWhite,
         body: Center(
           child: Transform.scale(
             scale: 1.5,

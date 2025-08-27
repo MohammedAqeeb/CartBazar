@@ -18,7 +18,7 @@ class ProductView extends StatelessWidget {
       child: Container(
         width: 180,
         decoration: BoxDecoration(
-            color: AppPalletes.secondBackground,
+            color: AppPalettes.secondBackground,
             borderRadius: BorderRadius.circular(8)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:cart_bazar/core/error/failure.dart';
 import 'package:cart_bazar/features/settings/data/models/completed_orders.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -14,7 +12,6 @@ abstract interface class CompletedOrdersDataSource {
 class CompletedOrdersSourceImp implements CompletedOrdersDataSource {
   @override
   Future<Either<Failure, List<CompletedOrders>>> getOrderStatus() async {
-    print('called service');
     final db = FirebaseFirestore.instance;
     final user = FirebaseAuth.instance.currentUser;
 

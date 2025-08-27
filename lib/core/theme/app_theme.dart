@@ -3,21 +3,21 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   static final themeData = ThemeData(
-    primaryColor: AppPalletes.primary,
-    scaffoldBackgroundColor: AppPalletes.background,
+    primaryColor: AppPalettes.primary,
+    scaffoldBackgroundColor: AppPalettes.background,
     brightness: Brightness.dark,
     fontFamily: 'CircularStd',
     snackBarTheme: const SnackBarThemeData(
-      backgroundColor: AppPalletes.background,
-      contentTextStyle: TextStyle(color: AppPalletes.offWhite),
+      backgroundColor: AppPalettes.background,
+      contentTextStyle: TextStyle(color: AppPalettes.offWhite),
     ),
 
     // TextField Decoration
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: AppPalletes.secondBackground,
+      fillColor: AppPalettes.secondBackground,
       hintStyle: const TextStyle(
-        color: AppPalletes.hintTextColor,
+        color: AppPalettes.hintTextColor,
         fontWeight: FontWeight.w400,
       ),
       contentPadding: const EdgeInsets.all(16),
@@ -34,7 +34,7 @@ class AppTheme {
     // Button Theme Style
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: AppPalletes.primary,
+        backgroundColor: AppPalettes.primary,
         elevation: 0,
         textStyle: const TextStyle(
           fontSize: 16,

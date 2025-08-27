@@ -104,8 +104,8 @@ class SignUpGenderAgeScreen extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             color: index.defaultIndex == genderIndex
-                ? AppPalletes.primary
-                : AppPalletes.secondBackground,
+                ? AppPalettes.primary
+                : AppPalettes.secondBackground,
           ),
           child: Text(
             text,
@@ -141,7 +141,7 @@ class SignUpGenderAgeScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
-              color: AppPalletes.secondBackground,
+              color: AppPalettes.secondBackground,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -167,7 +167,7 @@ class SignUpGenderAgeScreen extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 24),
       alignment: Alignment.center,
       height: 100,
-      decoration: const BoxDecoration(color: AppPalletes.secondBackground),
+      decoration: const BoxDecoration(color: AppPalettes.secondBackground),
       child: SubmitStateButton(
         onPressed: () {
           onBoardUser.age = context.read<SelectedAgeCubit>().defaultAge;

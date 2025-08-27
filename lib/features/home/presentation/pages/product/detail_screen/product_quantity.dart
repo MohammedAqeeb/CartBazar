@@ -16,7 +16,7 @@ class ProductQuantity extends StatelessWidget {
         padding: const EdgeInsets.only(left: 18, right: 22),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(100),
-          color: AppPalletes.secondBackground,
+          color: AppPalettes.secondBackground,
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -38,7 +38,7 @@ class ProductQuantity extends StatelessWidget {
                     padding: const EdgeInsets.all(8),
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
-                      color: AppPalletes.primary,
+                      color: AppPalettes.primary,
                     ),
                     child: const Icon(Icons.remove),
                   ),
@@ -65,7 +65,7 @@ class ProductQuantity extends StatelessWidget {
                     padding: const EdgeInsets.all(8),
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
-                      color: AppPalletes.primary,
+                      color: AppPalettes.primary,
                     ),
                     child: const Icon(Icons.add),
                   ),

@@ -70,7 +70,7 @@ class ViewAllCategoriesScreen extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         height: 70,
         decoration: BoxDecoration(
-          color: AppPalletes.secondBackground,
+          color: AppPalettes.secondBackground,
           borderRadius: BorderRadius.circular(8),
         ),
         child: Row(

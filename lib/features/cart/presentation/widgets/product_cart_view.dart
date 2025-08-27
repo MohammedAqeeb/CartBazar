@@ -22,7 +22,7 @@ class ProductCartView extends StatelessWidget {
         height: 100,
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
-          color: AppPalletes.secondBackground,
+          color: AppPalettes.secondBackground,
           borderRadius: BorderRadius.circular(16),
         ),
         child: Row(
@@ -158,7 +158,7 @@ class ProductCartView extends StatelessWidget {
                   height: 23,
                   width: 23,
                   decoration: const BoxDecoration(
-                    color: AppPalletes.primary,
+                    color: AppPalettes.primary,
                     shape: BoxShape.circle,
                   ),
                   child: const Icon(

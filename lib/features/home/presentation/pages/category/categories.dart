@@ -96,8 +96,8 @@ class CategoriesScreen extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
       child: Shimmer.fromColors(
-        baseColor: AppPalletes.hintTextColor,
-        highlightColor: AppPalletes.offWhite,
+        baseColor: AppPalettes.hintTextColor,
+        highlightColor: AppPalettes.offWhite,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -109,7 +109,7 @@ class CategoriesScreen extends StatelessWidget {
                     height: 60,
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
-                      color: AppPalletes.hintTextColor,
+                      color: AppPalettes.hintTextColor,
                     ),
                   ),
                   const SizedBox(height: 10),

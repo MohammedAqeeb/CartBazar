@@ -31,7 +31,7 @@ class SelectedProductColor extends StatelessWidget {
           padding: const EdgeInsets.only(left: 18, right: 22),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(100),
-            color: AppPalletes.secondBackground,
+            color: AppPalettes.secondBackground,
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -19,7 +19,7 @@ class CartCheckout extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 24),
       height: MediaQuery.of(context).size.height / 3.5,
-      color: AppPalletes.background,
+      color: AppPalettes.background,
       child: Column(
         children: [
           buildRowText(

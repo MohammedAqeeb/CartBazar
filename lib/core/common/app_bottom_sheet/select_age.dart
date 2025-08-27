@@ -7,7 +7,7 @@ class AppBottomSheet {
     required Widget widgets,
   }) {
     return showModalBottomSheet(
-      backgroundColor: AppPalletes.secondBackground,
+      backgroundColor: AppPalettes.secondBackground,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(30),

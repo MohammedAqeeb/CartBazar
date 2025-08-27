@@ -54,13 +54,13 @@ class HeaderWidget extends StatelessWidget {
       children: [
         for (var i = 0; i < 3; i++)
           Shimmer.fromColors(
-            baseColor: AppPalletes.hintTextColor,
+            baseColor: AppPalettes.hintTextColor,
             highlightColor: Colors.white,
             child: Container(
               width: 80,
               height: 50,
               decoration: const BoxDecoration(
-                color: AppPalletes.offWhite,
+                color: AppPalettes.offWhite,
                 shape: BoxShape.circle,
               ),
             ),
@@ -96,7 +96,7 @@ Widget _gender(UserInfoEnity userInfoEnity) {
     height: 40,
     padding: const EdgeInsets.symmetric(horizontal: 16),
     decoration: BoxDecoration(
-      color: AppPalletes.secondBackground,
+      color: AppPalettes.secondBackground,
       borderRadius: BorderRadius.circular(100),
     ),
     child: Center(
@@ -120,7 +120,7 @@ Widget _card(BuildContext context) {
       height: 40,
       width: 40,
       decoration: const BoxDecoration(
-        color: AppPalletes.primary,
+        color: AppPalettes.primary,
         shape: BoxShape.circle,
       ),
       child: SvgPicture.asset(

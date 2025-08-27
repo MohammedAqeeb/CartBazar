@@ -18,7 +18,7 @@ class ProductSizeBottomSheet extends StatelessWidget {
       width: double.infinity,
       height: MediaQuery.of(context).size.height / 2,
       decoration: const BoxDecoration(
-        color: AppPalletes.background,
+        color: AppPalettes.background,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(22),
           topRight: Radius.circular(22),
@@ -88,8 +88,8 @@ class ProductSizeBottomSheet extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(36),
             color: state == index
-                ? AppPalletes.primary
-                : AppPalletes.secondBackground,
+                ? AppPalettes.primary
+                : AppPalettes.secondBackground,
           ),
           child: Padding(
             padding: const EdgeInsets.only(left: 14, right: 14),
